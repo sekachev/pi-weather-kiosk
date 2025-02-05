@@ -36,7 +36,7 @@
 
 .top-left {
   top: 20px;
-  left: 20px;
+  left: -20px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -49,13 +49,20 @@
 }
 
 .bottom-left {
-  bottom: 20px;
+  width: 400px;
+  height: 350px;
+  bottom: 40px;
   left: 20px;
 }
 
 .bottom-right {
-  bottom: 20px;
+  bottom: 0px;
   right: 20px;
+  width: 400px;
+  height: 350px;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
 }
 
 /* Weather icon container to match temperature sizing */
@@ -81,15 +88,7 @@
   background: #000;
   position: relative;
 }
-  .bottom-right {
-    bottom: 20px;
-    right: 20px;
-    width: 400px;
-    height: 400px;
-    display: flex;
-    justify-content: center;
-    padding: 20px;
-}
+
 
 #calendar {
     display: flex;
@@ -104,7 +103,6 @@
     flex-direction: column;
     align-items: center;
     color: #fff;
-    width: 200px; /* Fixed width container */
 }
 
 .day-number {
@@ -128,8 +126,6 @@
 }
 
 .temp-display {
-  width: 400px;
-  height: 350px;
   font-size: 15.5rem;
   font-weight: 900;
   font-family: 'Comfortaa', sans-serif;
@@ -137,7 +133,7 @@
   background: linear-gradient(45deg, #fff, #aaa);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  margin: 0.5rem 0;
+  margin: 0;
 }
 
 /* Current time display */
@@ -146,4 +142,28 @@
   font-weight: 900;
   font-size: 2rem;
   color: #fa9f22;
+}
+
+.current-temp {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 500px;  /* Match bottom-left width */
+  height: 400px; /* Match top-right height */
+}
+
+.temp-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.feels-like {
+  font-family: 'Comfortaa', sans-serif;
+  font-size: 5rem;
+  font-weight: 900;
+  color: #fa9f22;  /* Matching the calendar day name color */
+  margin-top: -2rem;
+  letter-spacing: -0.05em;
 }

@@ -1,8 +1,13 @@
 function updateCurrentWeather(data) {
   const current = data.current;
   const tempElement = document.getElementById('temperature');
+  const feelsElement = document.getElementById('feels-like');
+  
   if (tempElement) {
     tempElement.textContent = `${Math.round(current.temperature_2m)}°`;
+  }
+  if (feelsElement) {
+    feelsElement.textContent = `FEELS ${Math.round(current.apparent_temperature)}°`;
   }
   
   // Update weather icon
@@ -10,12 +15,11 @@ function updateCurrentWeather(data) {
     window.updateWeatherIcon(data);
   }
 }
-
 function fetchWeather() {
   const apiURL =
-    "https://api.open-meteo.com/v1/forecast?" +
+  "https://api.open-meteo.com/v1/forecast?" +
     "latitude=59.4165&longitude=24.7994" +
-    "&current=temperature_2m,is_day,weather_code" +
+    "&current=temperature_2m,apparent_temperature,is_day,weather_code" +
     "&hourly=temperature_2m" +
     "&daily=sunrise,sunset" +
     "&timezone=Europe/Tallinn";

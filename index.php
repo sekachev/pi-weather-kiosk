@@ -26,8 +26,14 @@
 <body>
   <!-- Weather Containers -->
   <div class="corner-square top-left">
-    <div class="current-temp">
-      <div class="temp-display" id="temperature">--°</div>
+
+  <div class="current-temp">
+      <div class="temp-wrapper">
+        <div class="temp-display" id="temperature"></div>
+        <div class="feels-like" id="feels-like"></div>
+      </div>
+    </div>
+
     </div>
   </div>
   <div class="corner-square top-right">
