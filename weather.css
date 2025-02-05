@@ -1,68 +1,86 @@
 /* weather.css */
 
 /* Ensure the weather panels are fixed in the viewport */
-.corner-square {
-    position: fixed;
-    z-index: 2;
-    padding: 10px;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  /* Position the weather panels in each corner */
-  .top-left {
-    top: 20px;
-    left: 20px;
-  }
-  .top-right {
-    top: 20px;
-    right: 20px;
-  }
-  .bottom-left {
-    bottom: 20px;
-    left: 20px;
-  }
-  .bottom-right {
-    bottom: 20px;
-    right: 20px;
-  }
-  
-  /* Styling for the current temperature display */
-  .current-temp {
-    text-align: center;
-  }
-  .temp-display {
-    width: 400px;  /* adjust as needed */
-    height: 350px; /* adjust as needed */
-    font-size: 15.5rem;
-    font-weight: 300;
-    letter-spacing: -0.05em;
-    background: linear-gradient(45deg, #fff, #aaa);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    margin: 0.5rem 0;
-  }
-  
-  /* Styling for the weather chart container */
-  .chart-container {
-    width: 430px;  /* adjust as needed */
-    height: 400px; /* adjust as needed */
-    background: #000;
-    border-radius: 0px;
-    position: relative;
-  }
+/* Adjust the current temperature container */
+.current-temp {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 430px;  /* Match bottom-left width */
+  height: 350px; /* Match top-right height */
+}
 
-  #weather-icon {
-    font-size: 15.5rem;  /* Match temperature size */
-    background: linear-gradient(45deg, #fff, #aaa);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 400px;
-    height: 350px;
-  }
+.temp-display {
+  font-family: 'Comfortaa', sans-serif;
+  font-size: 15.5rem;
+  font-weight: 900;
+  letter-spacing: -0.05em;
+  background: linear-gradient(45deg, #fff, #aaa);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* Corner positioning */
+.corner-square {
+  position: fixed;
+  z-index: 2;
+  padding: 10px;
+}
+
+.top-left {
+  top: 20px;
+  left: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Keep other corner square styles */
+.top-right {
+  top: 20px;
+  right: 20px;
+}
+
+.bottom-left {
+  bottom: 20px;
+  left: 20px;
+}
+
+.bottom-right {
+  bottom: 20px;
+  right: 20px;
+}
+
+/* Weather icon container to match temperature sizing */
+.weather-icon-container {
+  width: 400px;
+  height: 350px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#weather-icon {
+  font-size: 15.5rem;
+  background: linear-gradient(45deg, #fff, #aaa);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Chart container dimensions */
+.chart-container {
+  width: 430px;
+  height: 400px;
+  background: #000;
+  position: relative;
+}
   .bottom-right {
     bottom: 20px;
     right: 20px;

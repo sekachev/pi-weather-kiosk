@@ -175,8 +175,10 @@ function updateChart(data) {
           },
           ticks: {
             color: '#666',
-            callback: value => `${value}°`,
-            stepSize: 1,
+            callback: function(value) {
+              return value.toFixed(1) + '°';  // Format to 1 decimal place
+            },
+            stepSize: 1,  // Show ticks every 0.5 degrees
             font: {
               family: 'Comfortaa',
               size: 24,

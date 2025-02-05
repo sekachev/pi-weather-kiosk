@@ -133,4 +133,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - Weather data provided by [Open-Meteo](https://open-meteo.com/)
 - Weather icons by [Weather Icons](https://erikflowers.github.io/weather-icons/)
 - Charts powered by [Chart.js](https://www.chartjs.org/)
-- Moment.js for time handling
+- Apple watch face by [Thai Pangsakulyanont](https://codepen.io/dtinth/pen/JjmLob)
